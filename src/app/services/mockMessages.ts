@@ -16,7 +16,8 @@ export const mockMessages: Message[] =
     xxx
     Anna`,
       internalDate: new Date(2017, 10, 13, 14, 25),
-      folder: "inbox"
+      folder: "inbox",
+      isMarked: false
     },
     {
       id: "2",
@@ -35,7 +36,8 @@ export const mockMessages: Message[] =
     Anna
     `,
       internalDate: new Date(2017, 10, 13, 19, 40),
-      folder: "inbox"
+      folder: "inbox",
+      isMarked: false
     },
     {
       id: "3",
@@ -48,6 +50,7 @@ export const mockMessages: Message[] =
       raw:
         "Anna asked to write. You don't seem to answer, she's getting nervous. Don't ignore her.",
       internalDate: new Date(2017, 10, 15, 11, 10),
-      folder: "inbox"
+      folder: "inbox",
+      isMarked: false
     }
   ];
