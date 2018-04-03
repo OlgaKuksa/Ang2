@@ -6,4 +6,6 @@ export class Message {
   }[];
   raw: string;
   internalDate: Date;
+  folder: string;
+  isMarked: boolean = false;
 }
