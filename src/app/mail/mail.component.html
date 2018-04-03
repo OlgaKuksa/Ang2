@@ -1,0 +1,16 @@
+<div class="mailArea">
+  <table class="table table-hover">
+    <thead>
+      <th scope="col">From</th>
+      <th scope="col">Message</th>
+      <th scope="col">Sent date</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let message of messages">
+        <td class="truncatedText">{{message.headers[0].name}}</td>
+        <td class="truncatedText">{{message.raw}}</td>
+        <td>{{message.internalDate.toLocaleString()}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

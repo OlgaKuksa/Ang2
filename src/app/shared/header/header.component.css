@@ -1,0 +1,9 @@
+.headerArea {
+  background-color: lightgrey;
+  margin-bottom: 20px;
+}
+
+.headerFilter {
+  margin-left: auto;
+  margin-right: auto;
+}
