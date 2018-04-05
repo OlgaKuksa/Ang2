@@ -12,7 +12,7 @@
           <input type="checkbox" class="form-check-input" /> </td>
         <td class="truncatedText">{{message.headers[0].name}}</td>
         <td class="truncatedText">{{message.raw}}</td>
-        <td>{{message.internalDate.toLocaleString()}}</td>
+        <td>{{message.internalDate|date:"dd-MM-yyyy hh:mm"}}</td>
       </tr>
     </tbody>
   </table>
