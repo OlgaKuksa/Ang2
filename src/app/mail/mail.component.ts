@@ -16,7 +16,9 @@ export class MailComponent implements OnInit {
 
   messages: Message[];
 
-  getMessages() {
-    this.messages = this.mailService.getMessages();
+  getMessages(): void {
+    this.mailService
+      .getMessages()
+      .subscribe(messages => (this.messages = messages));
   }
 }
