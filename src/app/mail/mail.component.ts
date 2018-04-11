@@ -5,7 +5,7 @@ import { Message } from "../classes/message";
 @Component({
   selector: "app-mail",
   templateUrl: "./mail.component.html",
-  styleUrls: ["./mail.component.css"]
+  styleUrls: ["./mail.component.scss"]
 })
 export class MailComponent implements OnInit {
   constructor(private mailService: MailService) {}
@@ -14,7 +14,7 @@ export class MailComponent implements OnInit {
     this.getMessages();
   }
 
-  messages: Message[];
+  public messages: Message[];
 
   getMessages(): void {
     this.mailService

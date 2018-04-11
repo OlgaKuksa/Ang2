@@ -8,7 +8,7 @@ import { of } from "rxjs/observable/of";
 export class MailService {
   constructor() {}
 
-  getMessages(): Observable<Message[]> {
+  public getMessages(): Observable<Message[]> {
     return of(mockMessages);
   }
 }
