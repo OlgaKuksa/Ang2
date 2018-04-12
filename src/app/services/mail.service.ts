@@ -11,4 +11,8 @@ export class MailService {
   public getMessages(): Observable<Message[]> {
     return of(mockMessages);
   }
+
+  public addMessage(message: Message): void {
+    mockMessages.push(message);
+  }
 }

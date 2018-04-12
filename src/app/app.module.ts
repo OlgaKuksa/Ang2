@@ -1,13 +1,14 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 import { MailComponent } from "./mail/mail.component";
 import { HeaderComponent } from "./shared/header/header.component";
 import { LeftmenuComponent } from "./shared/leftmenu/leftmenu.component";
-import { MailService } from './services/mail.service';
-import { AppRoutingModule } from './/app-routing.module';
-import { NewMailComponent } from './new-mail/new-mail.component';
+import { MailService } from "./services/mail.service";
+import { AppRoutingModule } from ".//app-routing.module";
+import { NewMailComponent } from "./new-mail/new-mail.component";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { NewMailComponent } from './new-mail/new-mail.component';
     LeftmenuComponent,
     NewMailComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [MailService],
   bootstrap: [AppComponent]
 })

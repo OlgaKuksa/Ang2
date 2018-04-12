@@ -1,3 +1,21 @@
-<p>
-  new-mail works!
-</p>
+<div class="mailArea">
+  <form class="form-horizontal" [formGroup]="myForm">
+    <div class="inputMargin">
+      <label for="mailTitle">To:</label>
+      <input type="text" placeholder="To" id="mailTitle" class="form-control" formControlName="to">
+
+      <div *ngIf="myForm.controls['to'].invalid&&myForm.controls['to'].touched">You should provide valid receiver's email</div>
+    </div>
+    <div class="inputMargin">
+      <label for="mailTopic">Topic:</label>
+      <input type="text" placeholder="Topic" id="mailTopic" class="form-control" formControlName="topic">
+    </div>
+    <div class="inputMargin">
+      <label for="mailText">Text:</label>
+      <textarea placeholder="Text" id="mailText" class="form-control" rows=10 formControlName="text"></textarea>
+      <div *ngIf="myForm.controls['text'].invalid&&myForm.controls['text'].touched">Message text should not be empty</div>
+    </div>
+    <button class="btn btn-info" (click)="addMessageHandler('drafts')" [disabled]="!myForm.valid">Save as draft</button>
+    <button class="btn btn-success float-right inputMargin" (click)="addMessageHandler('sent')" [disabled]="myForm.invalid">Send</button>
+  </form>
+</div>

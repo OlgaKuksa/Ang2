@@ -1,4 +1,4 @@
-export class Message {
+export interface Message {
   id: string;
   headers: {
     name: string;
@@ -7,5 +7,6 @@ export class Message {
   raw: string;
   internalDate: Date;
   folder: string;
-  isMarked: boolean = false;
+  isMarked: boolean;
+  topic: string;
 }
