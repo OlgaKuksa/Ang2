@@ -1,0 +1,12 @@
+.mailArea {
+  display: block;
+  float: right;
+  width: 85%;
+}
+
+.truncatedText {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

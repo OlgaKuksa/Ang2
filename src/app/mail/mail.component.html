@@ -1,0 +1,25 @@
+<div class="mailArea" *ngIf="messages.length>0; else no_res_found">
+  <table class="table table-hover">
+    <thead>
+      <th scope="col">Mark</th>
+      <th scope="col">From</th>
+      <th scope="col">Message</th>
+      <th scope="col">Sent date</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let message of messages">
+        <td class="text-center">
+          <input type="checkbox" class="form-check-input" /> </td>
+        <td class="truncatedText">{{message.headers[0].name}}</td>
+        <td class="truncatedText">{{message.raw}}</td>
+        <td>{{message.internalDate|date:"dd-MMMM-yyyy HH:mm"}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #no_res_found>
+  <div>
+    Sorry, there are no messages to display yet.
+  </div>
+</ng-template>
