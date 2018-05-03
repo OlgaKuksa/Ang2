@@ -8,7 +8,7 @@
       <th scope="col">Sent date</th>
     </thead>
     <tbody>
-      <tr *ngFor="let message of messages">
+      <tr *ngFor="let message of (messages|filterApply:filteredText)">
         <td class="text-center">
           <input type="checkbox" class="form-check-input" /> </td>
         <td class="truncatedText">{{message.headers[0].name}}</td>
@@ -18,6 +18,9 @@
       </tr>
     </tbody>
   </table>
+  <p>
+    {{mailService.subject | async}}
+  </p>
 </div>
 
 <ng-template #no_res_found>

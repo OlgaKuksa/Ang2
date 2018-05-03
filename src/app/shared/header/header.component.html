@@ -2,10 +2,10 @@
   <form class="form-inline">
     <img class="rounded-circle img-fluid" src="./assets/owl.jpg" alt="SquirralMail">
     <span class="headerFilter">
-      <input class="form-control" type="text " placeholder="Search " />
-      <button type="button">
-        Search
-      </button>
+      <input class="form-control" type="text " placeholder="Search " (input)="onInputChange($event)" />
+    </span>
+    <span>
+      <button (click)="logout()">Log out</button>
     </span>
   </form>
 </div>

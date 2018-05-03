@@ -1,0 +1,12 @@
+<div>
+  <form class="form-horizontal" [formGroup]="loginForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" class="form-control" formControlName="username" />
+    <div class="redText" *ngIf="loginForm.controls['username'].invalid&&loginForm.controls['username'].touched">Username shouldn't be empty</div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" class="form-control" formControlName="password" />
+    <div class="redText" *ngIf="loginForm.controls['password'].invalid&&loginForm.controls['password'].touched">Password shouldn't be empty</div>
+    <div class="redText">{{serverMessage}}</div>
+    <button (click)="tryToLogIn()" [disabled]="loginForm.invalid">Log in</button>
+  </form>
+</div>

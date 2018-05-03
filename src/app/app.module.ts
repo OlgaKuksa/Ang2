@@ -9,6 +9,11 @@ import { LeftmenuComponent } from "./shared/leftmenu/leftmenu.component";
 import { MailService } from "./services/mail.service";
 import { AppRoutingModule } from ".//app-routing.module";
 import { NewMailComponent } from "./new-mail/new-mail.component";
+import { FilterApplyPipe } from "./filter-apply.pipe";
+import { LoginComponent } from "./login/login.component";
+import { AuthGuard } from "./guards/auth.guard";
+import { LoginService } from "./services/login.service";
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -16,10 +21,13 @@ import { NewMailComponent } from "./new-mail/new-mail.component";
     MailComponent,
     HeaderComponent,
     LeftmenuComponent,
-    NewMailComponent
+    NewMailComponent,
+    FilterApplyPipe,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
-  providers: [MailService],
+  providers: [MailService, AuthGuard, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -2,13 +2,13 @@
   <form class="form-horizontal" [formGroup]="myForm">
     <div class="inputMargin">
       <label for="mailTitle">To:</label>
-      <input type="text" placeholder="To" id="mailTitle" class="form-control" formControlName="to">
+      <input type="text" placeholder="To" id="mailTitle" class="form-control" formControlName="to" />
 
       <div *ngIf="myForm.controls['to'].invalid&&myForm.controls['to'].touched">You should provide valid receiver's email</div>
     </div>
     <div class="inputMargin">
       <label for="mailTopic">Topic:</label>
-      <input type="text" placeholder="Topic" id="mailTopic" class="form-control" formControlName="topic">
+      <input type="text" placeholder="Topic" id="mailTopic" class="form-control" formControlName="topic" />
     </div>
     <div class="inputMargin">
       <label for="mailText">Text:</label>
