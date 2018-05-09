@@ -18,7 +18,6 @@ export class MailService {
   }
 
   public addMessage(message: Message): void {
-    this.messages.push(message);
     mockMessages.push(message);
   }
   /*

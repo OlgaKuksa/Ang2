@@ -40,6 +40,6 @@ export class NewMailComponent implements OnInit {
       topic: formModel["topic"]
     };
     this.mailService.addMessage(message);
-    this.router.navigate([folder]);
+    this.router.navigate(["dashboard/" + folder]);
   }
 }
