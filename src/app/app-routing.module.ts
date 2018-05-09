@@ -4,7 +4,7 @@ import { MailComponent } from "./mail/mail.component";
 import { NewMailComponent } from "./new-mail/new-mail.component";
 import { AuthGuard } from "./guards/auth.guard";
 import { LoginComponent } from "./login/login.component";
-import { DashboardComponent } from "./dashboard/dashboard.component";
+import { DashboardModule } from "./dashboard/dashboard.module";
 
 const routes: Routes = [
   {
@@ -13,35 +13,13 @@ const routes: Routes = [
     pathMatch: "full"
   },
   {
-    path: "dashboard",
-    canActivate: [AuthGuard],
-    component: DashboardComponent,
-    children: [
-      {
-        path: "inbox",
-        component: MailComponent
-      },
-      {
-        path: "sent",
-        component: MailComponent
-      },
-      {
-        path: "drafts",
-        component: MailComponent
-      },
-      {
-        path: "marked",
-        component: MailComponent
-      },
-      {
-        path: "newmail",
-        component: NewMailComponent
-      }
-    ]
-  },
-  {
     path: "login",
     component: LoginComponent
+  },
+  {
+    path: "dashboard",
+    canActivate: [AuthGuard],
+    loadChildren: "./dashboard/dashboard.module#DashboardModule"
   }
 ];
 @NgModule({

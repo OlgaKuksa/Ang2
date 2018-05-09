@@ -14,7 +14,7 @@ export class LoginService {
   setLogIn(username: string, password: string): string {
     if (username == "test" && password == "test123") {
       this.loggedIn = true;
-      this.router.navigate(["/dashboard/inbox"]);
+      this.router.navigate(["/dashboard"]);
       return "";
     } else
       return "Username and password don't match. Try again and click Log in button when you finish";
